@@ -31,5 +31,5 @@
 *.sdf
 
 # Result directories
-Debug/
-Release/
+Debug
+Release
