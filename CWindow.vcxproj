@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EF8CA0DF-724A-4B60-9E80-C7FA9050B22B}</ProjectGuid>
+    <ProjectGuid>{8ED83150-1E87-4E76-804E-3571A3561CA2}</ProjectGuid>
     <RootNamespace>CWindow</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -65,11 +65,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
-    <ClCompile Include="Views\CWindow.cpp" />
+    <ClCompile Include="CExample.cpp" />
+    <ClCompile Include="CWindow.cpp" />
+    <ClCompile Include="CWndClass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Test\DerivedWindow.h" />
-    <ClInclude Include="Views\CWindow.h" />
+    <ClInclude Include="CExample.h" />
+    <ClInclude Include="CWindow.h" />
+    <ClInclude Include="CWndClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
