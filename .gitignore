@@ -29,3 +29,7 @@
 
 # IntelliSense database
 *.sdf
+
+# Result directories
+Debug/
+Release/
