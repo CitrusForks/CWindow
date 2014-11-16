@@ -12,26 +12,43 @@
 class CWindow {
 protected:
 	HWND _hwnd;
-	DWORD _styleEx;
-	LPCTSTR _className;
-	LPCTSTR _windowName;
-	DWORD _style;
-	int _x;
-	int _y;
-	int _width;
-	int _height;
-	HWND _hwndParent;
-	HMENU _hMenu;
 	HINSTANCE _hInstance;
+	LPTSTR _lpClassName;
+	LPTSTR _lpCaption;
+	LPVOID _lParam;
+	WNDPROC _wndprocDefault;
 
-public:
 	CWindow();
+	virtual VOID SetClassName(LPCTSTR lpszClassName);
+	virtual VOID Register(LPWNDCLASSEX lpwndClassEx);
+public:
+	CWindow(LPCSTR lpszCaption, LPWNDCLASSEX lpwndClassEx);
+	CWindow(LPCSTR lpszCaption, HINSTANCE hInstance, LPCTSTR lpszClassName);
+	CWindow(LPCSTR lpszCaption, HINSTANCE hInstance, LPCTSTR lpszClassName,
+		UINT style, HICON hIcon, HCURSOR hCursor, HBRUSH hbrBackground, 
+		LPCTSTR lpszMenuName, HICON hIconSm);
+
+	~CWindow();
+
+	virtual LPCTSTR GetCaption();
+	virtual VOID SetCaption(LPCTSTR lpszCaption);
+	virtual LPCTSTR GetClassName();
+
+	virtual HWND Create();
+	virtual HWND Create(HWND hWndParent);
+	virtual HWND Create(HWND hWndParent, DWORD dwExStyle, DWORD dwStyle,
+		INT x, INT y, INT nWidth, INT nHeight, HMENU hMenu, LPVOID lpParam);
+
+	virtual BOOLEAN Show(int nCmdShow);
+	virtual BOOLEAN Show();
+	virtual BOOLEAN Hide();
+	virtual BOOLEAN Maximize();
+	virtual BOOLEAN Minimize();
+	virtual BOOLEAN Restore();
 
 	static LRESULT CALLBACK msgRouter(HWND, UINT, WPARAM, LPARAM);
 
 	virtual LRESULT CALLBACK wndProc(HWND, UINT, WPARAM, LPARAM) = 0;
-
-	virtual bool Create();
 };
 
 #endif

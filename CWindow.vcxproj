@@ -65,14 +65,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
-    <ClCompile Include="CExample.cpp" />
+    <ClCompile Include="CMainWindow.cpp" />
     <ClCompile Include="CWindow.cpp" />
-    <ClCompile Include="CWndClass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CExample.h" />
+    <ClInclude Include="CMainWindow.h" />
     <ClInclude Include="CWindow.h" />
-    <ClInclude Include="CWndClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
