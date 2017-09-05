@@ -5,6 +5,8 @@
 #include "CWndClass.h"
 
 class CMainWindow : public CWindow {
+
+
 public:
 	CMainWindow(LPCSTR lpszCaption, LPWNDCLASSEX lpwndClassEx);
 	CMainWindow(LPCSTR lpszCaption, HINSTANCE hInstance, LPCTSTR lpszClassName);
